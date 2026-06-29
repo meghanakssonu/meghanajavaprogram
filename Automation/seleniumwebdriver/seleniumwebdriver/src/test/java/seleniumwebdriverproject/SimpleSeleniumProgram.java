@@ -1,0 +1,33 @@
+package seleniumwebdriverproject;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SimpleSeleniumProgram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//launching browser
+		ChromeDriver driver=new ChromeDriver();
+		System.out.println(System.getProperty("java.version"));
+		//open url
+		driver.get("https://www.google.com/");
+		//valid title
+		String title=driver.getTitle();
+		System.out.println(title);
+		String expectedtitle="Google";
+		if(title.equals(expectedtitle))
+		{
+			System.out.println("testpass");
+		}
+		else
+		{
+			System.out.println("testfail");
+		}
+		//close browser
+		driver.close();
+
+		
+		
+	}
+
+}

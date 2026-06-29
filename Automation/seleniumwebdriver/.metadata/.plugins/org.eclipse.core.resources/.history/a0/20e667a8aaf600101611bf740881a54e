@@ -1,0 +1,32 @@
+package seleniumwebdriverproject;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+public class LocatorsDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://demoblaze.com/");
+		driver.manage().window().maximize();
+		
+		//name header link
+		driver.findElement(By.linkText("Contact")).click();
+		List<WebElement> header=driver.findElements(By.className("nav-item"));
+		int s=header.size();
+		System.out.println(s);
+		//total links
+	List<WebElement> links	=driver.findElements(By.tagName("a"));
+	int l=links.size();
+	System.out.println(l)
+		
+
+	}
+
+}
